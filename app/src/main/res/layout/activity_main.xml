@@ -7,25 +7,4 @@
     tools:context=".ui.activity.MainActivity"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/login"
-        android:text="login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/logout"
-        android:text="logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/update"
-        android:text="update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/register"
-        android:text="register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
 </LinearLayout>
