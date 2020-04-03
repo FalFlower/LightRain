@@ -4,5 +4,8 @@ enum class ResponseStatus {
     LOGIN,
     LOGOUT,
     UPDATE,
-    REGISTER
+    REGISTER,
+    PROVINCE,
+    CITY,
+    COUNTY
 }

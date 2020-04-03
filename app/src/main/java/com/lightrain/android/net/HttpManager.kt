@@ -4,6 +4,7 @@ import android.widget.Toast
 import com.google.gson.Gson
 import com.lightrain.android.LightRainApplication
 import com.lightrain.android.util.BmMatch
+import com.lightrain.android.util.StringUtil
 import com.lightrain.android.util.ThreadUtil
 import okhttp3.*
 import org.jetbrains.anko.toast
@@ -15,6 +16,7 @@ import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.util.concurrent.TimeUnit
 
+//用于统一管理网络请求
 class HttpManager private constructor(){
     private val client= OkHttpClient.Builder()
         .connectTimeout(10, TimeUnit.SECONDS)
@@ -50,13 +52,15 @@ class HttpManager private constructor(){
 
     private fun analysisResponse(response: Response,responseStatus:ResponseStatus, handler: ResponseHandler) {
         val msg=response.body?.string()
-        println("onResponse: response.body?.string: $msg")
-        val res= msg?.let { BmMatch("timestamp").match(it) }//判断是否为异常
-        if (res?.isEmpty()!!){
-            handler.onSuccess(responseStatus,msg)//返回正确的Json数据
-        }else{
-            handler.onError(msg)//返回异常Json数据
+        //println("onResponse: response.body?.string: $msg")
+        //判断是否为异常
+        msg?.let {
+            if (StringUtil.isMatch("timestamp",it))
+                handler.onSuccess(responseStatus,msg)//返回正确的Json数据
+            else
+                handler.onError(msg)//返回异常Json数据
         }
+
     }
 
 }

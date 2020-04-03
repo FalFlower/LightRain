@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/currencyBody"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+        <TextView
+            android:id="@+id/currencyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这里标题"
+            android:textColor="@color/colorText"
+            android:textSize="14sp"
+            android:layout_alignParentStart="true"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true">
+            <TextView
+                android:id="@+id/currencySubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小副标题"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                android:layout_marginEnd="10dp"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_arrow_right" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/currencyLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bottomGery"
+        android:layout_marginStart="20dp"/>
+</LinearLayout>

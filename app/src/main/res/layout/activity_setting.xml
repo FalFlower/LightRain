@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <com.lightrain.android.view.ToolBarView
+        android:id="@+id/settingToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <com.lightrain.android.view.SettingInfoView
+        android:id="@+id/settingInfoView"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_marginBottom="10dp"/>
+
+    <com.lightrain.android.view.CurrencyItemView
+        android:id="@+id/settingPush"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <RelativeLayout
+        android:id="@+id/settingClean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_clean"
+            android:textColor="@color/colorText"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/settingCleanText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="6.2MB"
+            android:layout_marginEnd="5dp"/>
+    </RelativeLayout>
+    <com.lightrain.android.view.CurrencyItemView
+        android:id="@+id/settingPlay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <com.lightrain.android.view.CurrencyItemView
+        android:id="@+id/settingVersion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <com.lightrain.android.view.CurrencyItemView
+        android:id="@+id/settingMark"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <com.lightrain.android.view.CurrencyItemView
+        android:id="@+id/settingAgreement"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <com.lightrain.android.view.CurrencyItemView
+        android:id="@+id/settingPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <com.lightrain.android.view.CurrencyItemView
+        android:id="@+id/settingAbout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <Button
+        android:id="@+id/settingQuitLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_border_line"
+        android:text="@string/quit_login"
+        android:textColor="@color/colorPrimary"/>
+
+</LinearLayout>

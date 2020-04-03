@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preference xmlns:android="http://schemas.android.com/apk/res/android">
+    <tab
+        id="@+id/tab_home"
+        icon="@mipmap/ic_bottom_home"
+        title="首页"
+         />
+    <tab
+        id="@+id/tab_find"
+        icon="@mipmap/ic_bottom_find"
+        title="发现"
+        />
+    <tab
+        id="@+id/tab_learning"
+        icon="@mipmap/ic_bottom_learning"
+        title="学习"
+        />
+    <tab
+        id="@+id/tab_info"
+        icon="@mipmap/ic_bottom_info"
+        title="账号"
+        />
+</Preference>
+<!--barColorWhenSelected="@color/bottomGrey"-->

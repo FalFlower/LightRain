@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/listBack">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="65dp"
+            android:id="@+id/personalSpaceListImage"
+            android:scaleType="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp">
+            <TextView
+                android:id="@+id/personalSpaceListTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorText"
+                android:text="SpringBoot进阶之Web进阶"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/ic_person_num"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/personalSpaceListPeopleNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorListGrey"
+                    android:text="94793"
+                    android:layout_marginStart="2dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/personalSpaceListIsFree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/colorListGrey"
+                android:text="免费"
+                android:layout_marginStart="2dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
