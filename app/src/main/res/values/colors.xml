@@ -20,4 +20,11 @@
     <color name="colorViewSubtitle">#c4c8cb</color>
     <color name="colorViewTitle">#2c3339</color>
     <color name="colorLine">#d9dde0</color>
+    <color name="searchBarBackground">#f0f1f3</color>
+    <color name="classificationTextColor">#72777d</color>
+    <color name="selectTextColor">#ef1313</color>
+    <color name="titleTextColor">#2b343b</color>
+    <color name="titleTextNoSelectColor">#71767c</color>
+    <color name="titleTextColorGrey">#74797f</color>
+    <color name="black">#000</color>
 </resources>

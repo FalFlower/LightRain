@@ -134,7 +134,10 @@ class PicChooseUtil {
         }
 
         //表单上传（本地签名方式）
-        UploadEngine.getInstance().formUpload(temp, paramsMap, "zt847269989", UpYunUtils.md5("dQnEAE9Nv4pU9FvQvzSjfRDA3H8eUCg8"), completeListener, progressListener);
+        UploadEngine.getInstance().formUpload(temp, paramsMap,
+            "zt847269989",
+            UpYunUtils.md5("dQnEAE9Nv4pU9FvQvzSjfRDA3H8eUCg8"),
+            completeListener, progressListener);
     }
 
     //从相册选择

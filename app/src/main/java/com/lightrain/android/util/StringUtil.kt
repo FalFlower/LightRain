@@ -1,6 +1,5 @@
 package com.lightrain.android.util
 
-import okhttp3.internal.and
 import java.math.BigInteger
 import java.security.MessageDigest
 import java.text.SimpleDateFormat
@@ -42,6 +41,22 @@ object StringUtil {
         sdf.timeZone = TimeZone.getTimeZone("GMT")
         return sdf.format(time)
     }
+    //随机生成一个六位验证码
+    fun getVerificationCode():String{
+        val string= arrayOf("0","1","2","3","4","5","6","7","8","9")
+        val num=0..5
+        var code=""
+        for (i in num) {
+            code+=string[Random().nextInt(string.size)]
+        }
+        return code
+    }
 
-
+    //生成唯一主键(时间+随机数)  synchronized关键字防止重复出现同样的数字
+    @Synchronized
+    fun genUniqueKey(): String {
+        val random = Random()
+        val a = random.nextInt(900000) + 100000 //生成六位随机数
+        return System.currentTimeMillis().toString() + a.toString()
+    }
 }

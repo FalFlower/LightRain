@@ -3,30 +3,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:gravity="center"
     android:background="@color/listBack">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:id="@+id/personalSpaceListBac">
         <ImageView
             android:layout_width="110dp"
-            android:layout_height="65dp"
+            android:layout_height="75dp"
             android:id="@+id/personalSpaceListImage"
-            android:scaleType="center"/>
+            android:scaleType="fitXY"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="2dp"
+            android:padding="7dp"
             android:layout_gravity="center"
             android:layout_marginStart="5dp">
             <TextView
                 android:id="@+id/personalSpaceListTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorText"
                 android:text="SpringBoot进阶之Web进阶"/>
@@ -35,7 +36,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="2dp"
-                android:layout_marginBottom="2dp">
+                android:layout_marginBottom="2dp"
+                android:paddingTop="5dp">
                 <ImageView
                     android:layout_width="15dp"
                     android:layout_height="15dp"
@@ -48,7 +50,10 @@
                     android:textSize="12sp"
                     android:textColor="@color/colorListGrey"
                     android:text="94793"
-                    android:layout_marginStart="2dp"/>
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginStart="2dp"
+                    />
             </LinearLayout>
 
             <TextView
@@ -58,9 +63,17 @@
                 android:textSize="12sp"
                 android:textColor="@color/colorListGrey"
                 android:text="免费"
+                android:paddingTop="5dp"
                 android:layout_marginStart="2dp"/>
 
         </LinearLayout>
     </LinearLayout>
-
+    <TextView
+        android:id="@+id/personalSpaceListNullTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/list_null_tip"
+        android:gravity="center"
+        android:padding="40dp"
+        android:layout_marginTop="50dp"/>
 </LinearLayout>

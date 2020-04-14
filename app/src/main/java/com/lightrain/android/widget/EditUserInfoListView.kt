@@ -1,4 +1,4 @@
-package com.lightrain.android.view
+package com.lightrain.android.widget
 
 import android.content.Context
 import android.util.AttributeSet

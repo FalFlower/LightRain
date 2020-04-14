@@ -4,7 +4,7 @@ import android.view.View
 import com.lightrain.android.R
 import com.lightrain.android.base.BaseFragment
 
-class FindFragment :BaseFragment(){
+class ClassificationFragment :BaseFragment(){
     override fun intView(): View? {
         return View.inflate(context,R.layout.fragment_find,null)
     }

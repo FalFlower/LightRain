@@ -3,10 +3,12 @@ package com.lightrain.android
 import android.Manifest
 import android.app.Application
 import android.content.Context
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.ActivityCompat
 import com.lightrain.android.model.UserInfoBean
+import com.lightrain.android.model.UserRelationshipBean
 import com.lightrain.android.net.HttpManager
 import com.lightrain.android.net.ResponseHandler
 import com.lightrain.android.net.ResponseStatus
@@ -15,10 +17,13 @@ import com.lightrain.android.util.URLProviderUtils
 import org.jetbrains.anko.AnkoLogger
 
 class LightRainApplication : Application(), ResponseHandler,AnkoLogger {
-
+    var info:SharedPreferences?=null
+    var username=""
+    var password=""
     companion object{
         var userInfoBean:UserInfoBean?=null //保存用户个人信息
         var app:Context?=null
+        var userRelationship:UserRelationshipBean?=null
     }
 
     //初始化
@@ -28,39 +33,43 @@ class LightRainApplication : Application(), ResponseHandler,AnkoLogger {
         autoLogin()
     }
 
+    private fun getUserRelationship() {
+        HttpManager.
+        manager.sendRequestByGet(
+            URLProviderUtils.getUserRelationshipInfo(username),
+            ResponseStatus.USER_RELATIONSHIP,this)
 
+    }
 
 
     private fun autoLogin() {
-        val info=getSharedPreferences("userInfo", Context.MODE_PRIVATE)
-        val username=info.getString("username","")
-        val password=info.getString("password","")
+        info=getSharedPreferences("userInfo", Context.MODE_PRIVATE)
+        info?.let {
+            username=it.getString("username","").toString()
+            password=it.getString("password","").toString()
+            login(username,password)
+            getUserRelationship()
+        }
+    }
+
+    private fun login(username: String, password: String) {
         if (username!=""&&password!=""){
             //自动登录
             HttpManager.manager.sendRequestByGet(
                 URLProviderUtils.
-                getUserInfoLoginUrl(username.toString(),password.toString()),
+                getUserInfoLoginUrl(username,password),
                 ResponseStatus.LOGIN,this)
         }
     }
 
-    //application结束时调用
-    override fun onTerminate() {
-        super.onTerminate()
-//        //如果登录就需要注销登录
-//        if (userInfoBean!=null){
-//            HttpManager.manager
-//                .sendRequestByGet(URLProviderUtils.getUserInfoLogoutUrl(userInfoBean!!.username),
-//                ResponseStatus.LOGOUT,this)
-//        }
-
-    }
-
     override fun onError(msg: String?) {
-        val exception=msg?.let { JsonUtil.getResponseException(it) }
-        exception?.let {
-            println("LightRainApplication error :${exception.status} + ${exception.message}")
+        //尚且有个Bug，自动注销问题
+        if (msg.equals("已登录，请勿重复登陆")){
+            HttpManager.
+                manager.sendRequestByGet(URLProviderUtils.
+                    getUserInfoLogoutUrl(username),ResponseStatus.LOGOUT,this)
         }
+        println("LightRainApplication error :${msg} ")
 
     }
 
@@ -69,7 +78,12 @@ class LightRainApplication : Application(), ResponseHandler,AnkoLogger {
             ResponseStatus.LOGIN->{
                 userInfoBean= result?.let { JsonUtil.getResultResponse<UserInfoBean>(it,UserInfoBean::class.java).data }
             }
-            ResponseStatus.LOGOUT->{ println("LightRainApplication logout success")
+            ResponseStatus.LOGOUT->{
+                println("LightRainApplication logout success")
+                login(username,password)
+            }
+            ResponseStatus.USER_RELATIONSHIP->{
+                userRelationship= result?.let { JsonUtil.getResultResponse(it,UserRelationshipBean::class.java).data }
             }
             else -> {}
         }

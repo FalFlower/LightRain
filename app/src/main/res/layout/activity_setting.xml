@@ -5,18 +5,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white">
-    <com.lightrain.android.view.ToolBarView
+    <com.lightrain.android.widget.ToolBarView
         android:id="@+id/settingToolBar"
         android:layout_width="match_parent"
         android:layout_height="45dp" />
 
-    <com.lightrain.android.view.SettingInfoView
+    <com.lightrain.android.widget.SettingInfoView
         android:id="@+id/settingInfoView"
         android:layout_width="match_parent"
         android:layout_height="76dp"
         android:layout_marginBottom="10dp"/>
 
-    <com.lightrain.android.view.CurrencyItemView
+    <com.lightrain.android.widget.CurrencyItemView
         android:id="@+id/settingPush"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
@@ -41,27 +41,27 @@
             android:text="6.2MB"
             android:layout_marginEnd="5dp"/>
     </RelativeLayout>
-    <com.lightrain.android.view.CurrencyItemView
+    <com.lightrain.android.widget.CurrencyItemView
         android:id="@+id/settingPlay"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
-    <com.lightrain.android.view.CurrencyItemView
+    <com.lightrain.android.widget.CurrencyItemView
         android:id="@+id/settingVersion"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
-    <com.lightrain.android.view.CurrencyItemView
+    <com.lightrain.android.widget.CurrencyItemView
         android:id="@+id/settingMark"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
-    <com.lightrain.android.view.CurrencyItemView
+    <com.lightrain.android.widget.CurrencyItemView
         android:id="@+id/settingAgreement"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
-    <com.lightrain.android.view.CurrencyItemView
+    <com.lightrain.android.widget.CurrencyItemView
         android:id="@+id/settingPrivacy"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
-    <com.lightrain.android.view.CurrencyItemView
+    <com.lightrain.android.widget.CurrencyItemView
         android:id="@+id/settingAbout"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>

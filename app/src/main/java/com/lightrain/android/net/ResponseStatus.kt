@@ -7,5 +7,12 @@ enum class ResponseStatus {
     REGISTER,
     PROVINCE,
     CITY,
-    COUNTY
+    COUNTY,
+    SEND_MESSAGE,
+    USER_RELATIONSHIP,
+    VIDEO,
+    UV,
+    USER_INFO,
+    FOLLOW,
+    UN_FOLLOW
 }

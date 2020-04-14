@@ -83,7 +83,7 @@ class EditUserInfoActivity :BaseActivity(), ResponseHandler, Runnable {
         val m = c.get(Calendar.MONTH)
         val d = c.get(Calendar.DAY_OF_MONTH)
 
-        val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+        val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
             // Display Selected date in textbox
             userInfo?.let {
                 it.userBirthday="$year-${monthOfYear+1}-$dayOfMonth"
@@ -135,9 +135,8 @@ class EditUserInfoActivity :BaseActivity(), ResponseHandler, Runnable {
         }
     }
 
-    //修改签名或者昵称或者学校   （签名还未实现）
+    //修改签名或者昵称或者学校
     private fun editNickOrSignOrSchool(i: Int) {
-
         val title=when(i){
             0->"编写签名"
             1->"修改昵称"
@@ -171,7 +170,7 @@ class EditUserInfoActivity :BaseActivity(), ResponseHandler, Runnable {
         ) { _, _ ->
             userInfo?.let {
                 when(i){
-                    0->{ }//更新签名
+                    0->it.userSign=dialogView.dialogEditText.text.toString()//更新签名
                     1->it.nickname=dialogView.dialogEditText.text.toString()
                     2->it.userSchool=dialogView.dialogEditText.text.toString()
                 }
@@ -204,7 +203,8 @@ class EditUserInfoActivity :BaseActivity(), ResponseHandler, Runnable {
     }
 
     override fun onError(msg: String?) {
-        toast("修改失败：${msg?.let { JsonUtil.getResponseException(it).message }}")
+        toast("修改失败：${msg}")
+//        toast("修改失败：${msg?.let { JsonUtil.getResponseException(it).message }}")
     }
 
     override fun onSuccess(status: ResponseStatus, result: String?) {

@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:orientation="vertical"
-    android:paddingStart="20dp"
     android:background="@color/white">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingStart="20dp">
         <ImageView
             android:id="@+id/infoLoginImg"
             android:layout_width="56dp"
@@ -61,7 +61,6 @@
                     android:id="@+id/infoLoginTextLearning"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100小时"
                     android:textColor="@color/colorText"
                     android:textSize="12sp"
                     android:layout_marginEnd="25dp"/>
@@ -76,7 +75,6 @@
                     android:id="@+id/infoLoginTextException"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="7777"
                     android:textColor="@color/colorText"
                     android:textSize="12sp"
                     android:layout_marginEnd="10dp"/>
@@ -90,25 +88,27 @@
         android:orientation="horizontal"
         android:gravity="center">
         <LinearLayout
+            android:id="@+id/infoLoginFollowLayout"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:paddingEnd="5dp"
+                android:gravity="end"
                 android:layout_height="wrap_content"
                 android:text="@string/info_follow"
                 android:textColor="@color/colorTextGreyPlus"
-                android:textSize="14sp"
-                android:layout_marginEnd="10dp"/>
+                android:textSize="14sp" />
             <TextView
                 android:id="@+id/infoLoginTextFollow"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="2"
                 android:textColor="@color/colorText"
-                android:textSize="14sp"
-                android:layout_marginEnd="25dp"/>
+                android:textSize="14sp" />
         </LinearLayout>
         <View
             android:background="@color/colorTextHint"
@@ -117,25 +117,27 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"/>
         <LinearLayout
+            android:id="@+id/infoLoginFansLayout"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:paddingEnd="5dp"
+                android:gravity="end"
                 android:layout_height="wrap_content"
                 android:text="@string/info_fans"
                 android:textColor="@color/colorTextGreyPlus"
-                android:textSize="14sp"
-                android:layout_marginEnd="10dp"/>
+                android:textSize="14sp" />
             <TextView
                 android:id="@+id/infoLoginTextFans"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="2"
                 android:textColor="@color/colorText"
-                android:textSize="14sp"
-                android:layout_marginEnd="25dp"/>
+                android:textSize="14sp" />
         </LinearLayout>
         <View
             android:background="@color/colorTextHint"
@@ -144,25 +146,28 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"/>
         <LinearLayout
+            android:id="@+id/infoLoginIntegralLayout"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:paddingEnd="5dp"
                 android:layout_height="wrap_content"
                 android:text="@string/info_integral"
                 android:textColor="@color/colorTextGreyPlus"
                 android:textSize="14sp"
-                android:layout_marginEnd="10dp"/>
+                android:gravity="end"
+                />
             <TextView
                 android:id="@+id/infoLoginTextIntegral"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="333"
                 android:textColor="@color/colorText"
-                android:textSize="14sp"
-                android:layout_marginEnd="25dp"/>
+                android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 

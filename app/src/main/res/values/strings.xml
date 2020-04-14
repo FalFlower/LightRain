@@ -23,6 +23,14 @@
     <string name="setting_clean">清理缓存</string>
     <string name="setting_info_click">请先登录</string>
     <string name="quit_login">退出登录</string>
-    <string name="personal_space">已学课程</string>
+    <string name="personal_space">课程</string>
     <string name="user_icon">头像</string>
+    <string name="list_null_tip">童鞋有点懒哦~还没有学习课程</string>
+    <string name="tab_follow">关注</string>
+    <string name="tab_un_follow">取消关注</string>
+    <string name="tab_fan">粉丝</string>
+    <string name="list_follow_null">童鞋你还没有关注其他人哦~</string>
+    <string name="list_fan_null">还没有人关注童鞋你哦~</string>
+    <string name="version_code">请输入验证码</string>
+    <string name="re_version_code">重新发送验证码</string>
 </resources>

@@ -6,9 +6,9 @@
         title="首页"
          />
     <tab
-        id="@+id/tab_find"
-        icon="@mipmap/ic_bottom_find"
-        title="发现"
+        id="@+id/tab_classification"
+        icon="@mipmap/ic_bottom_classification"
+        title="分类"
         />
     <tab
         id="@+id/tab_learning"

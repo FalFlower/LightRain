@@ -55,7 +55,8 @@ class LoginActivity :BaseActivity(), ResponseHandler {
 
     override fun onError(msg: String?) {
         runOnUiThread {
-            toast("${runOnUiThread { toast("${msg?.let { JsonUtil.getResponseException(it).message }}") }}")
+            toast("登陆失败：$msg")
+//            toast("${runOnUiThread { toast("${msg?.let { JsonUtil.getResponseException(it).message }}") }}")
         }
         println("LoginActivity login failed,cause is $msg")
     }

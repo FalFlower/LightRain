@@ -26,7 +26,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.2.0'
@@ -34,10 +34,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
-    implementation "org.jetbrains.anko:anko:0.10.8"
+    implementation 'org.jetbrains.anko:anko:0.10.8'
     implementation 'com.roughike:bottom-bar:2.3.1'
-    implementation "com.squareup.okhttp3:okhttp:4.4.0"
+    implementation 'com.squareup.okhttp3:okhttp:4.4.0'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'jp.wasabeef:glide-transformations:4.0.1'
@@ -46,4 +45,5 @@ dependencies {
     implementation 'org.conscrypt:conscrypt-android:2.2.1'
     implementation 'com.github.ikidou:TypeBuilder:1.0'
     implementation 'com.upyun:upyun-android-sdk:2.1.2'
+    implementation 'com.youth.banner:banner:2.0.6'
 }

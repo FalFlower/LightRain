@@ -1,4 +1,4 @@
-package com.lightrain.android.view
+package com.lightrain.android.widget
 
 import android.content.Context
 import android.util.AttributeSet
@@ -7,7 +7,6 @@ import android.widget.RelativeLayout
 import com.lightrain.android.LightRainApplication
 import com.lightrain.android.R
 import com.lightrain.android.ui.activity.EditUserInfoActivity
-import com.lightrain.android.ui.activity.LoginActivity
 import com.lightrain.android.util.ImageUtil
 import com.lightrain.android.util.UserInfoUtil
 import kotlinx.android.synthetic.main.view_setting_info.view.*

@@ -2,7 +2,7 @@ package com.lightrain.android.util
 
 import com.lightrain.android.R
 import com.lightrain.android.base.BaseFragment
-import com.lightrain.android.ui.fragment.FindFragment
+import com.lightrain.android.ui.fragment.ClassificationFragment
 import com.lightrain.android.ui.fragment.HomeFragment
 import com.lightrain.android.ui.fragment.InfoFragment
 import com.lightrain.android.ui.fragment.LearningFragment
@@ -13,7 +13,7 @@ class FragmentUtil private constructor(){
         val fragmentUtil by lazy { FragmentUtil() }
     }
     private val homeFragment by lazy { HomeFragment() }
-    private val findFragment by lazy { FindFragment() }
+    private val findFragment by lazy { ClassificationFragment() }
     private val learningFragment by lazy { LearningFragment() }
     private val infoFragment by lazy { InfoFragment() }
 
@@ -21,7 +21,7 @@ class FragmentUtil private constructor(){
     fun getFragment(tabId:Int): BaseFragment?{
         when(tabId){
             R.id.tab_home-> return homeFragment
-            R.id.tab_find->return findFragment
+            R.id.tab_classification->return findFragment
             R.id.tab_learning->return learningFragment
             R.id.tab_info->return infoFragment
         }

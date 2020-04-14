@@ -3,11 +3,8 @@ package com.lightrain.android.ui.fragment
 import android.view.View
 import com.lightrain.android.R
 import com.lightrain.android.base.BaseFragment
-import com.lightrain.android.ui.activity.MainActivity
 import com.lightrain.android.ui.activity.SettingActivity
-import com.lightrain.android.util.FragmentUtil
-import com.lightrain.android.util.UserInfoUtil
-import com.lightrain.android.view.InfoLoginView
+import com.lightrain.android.widget.InfoLoginView
 import kotlinx.android.synthetic.main.fragment_info.*
 import org.jetbrains.anko.support.v4.startActivity
 

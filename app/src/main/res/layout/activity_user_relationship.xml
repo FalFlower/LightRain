@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="-10dp"
+        app:cardMaxElevation="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp">
+            <ImageView
+                android:id="@+id/urActivityBack"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_arrow_back_nobar"
+                android:layout_gravity="center"
+                android:layout_marginStart="25dp"/>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/urActivityTabLayout"
+                app:tabTextColor="@color/titleTextNoSelectColor"
+                app:tabSelectedTextColor="@color/titleTextColor"
+                app:tabIndicatorColor="@color/titleTextColor"
+                app:tabTextAppearance="@style/toolbarTitle"
+                app:tabGravity="center"
+                app:tabMinWidth="70dp"
+                app:tabIndicatorHeight="2dp"
+                app:tabIndicatorFullWidth="false"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="45dp">
+            </com.google.android.material.tabs.TabLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/urActivityViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

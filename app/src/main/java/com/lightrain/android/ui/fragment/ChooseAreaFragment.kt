@@ -55,7 +55,7 @@ class ChooseAreaFragment : Fragment(), ResponseHandler {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        chooseAreaListView.setOnItemClickListener { parent, view, position, id ->
+        chooseAreaListView.setOnItemClickListener { _, _, position, _ ->
             when(currentLevel){
                 LEVEL_PROVINCE->{
                     selectProvince= provinceList?.get(position)

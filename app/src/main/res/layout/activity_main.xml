@@ -20,7 +20,7 @@
         android:layout_alignParentBottom="true"
         app:bb_tabXmlResource="@xml/bottombar_tabs"
         app:bb_inActiveTabColor="@color/bottomGery"
-        app:bb_activeTabColor="@color/bottomBlack"
+        app:bb_activeTabColor="@color/selectTextColor"
         app:bb_titleTextAppearance="@style/BottomText"/>
 </LinearLayout>
 <!--<FrameLayout

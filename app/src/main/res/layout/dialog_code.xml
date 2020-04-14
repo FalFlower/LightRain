@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <EditText
+            android:id="@+id/dialogCodeEditText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:hint="@string/version_code"
+            android:textColorHint="@color/colorTextHint"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:background="@null"
+            android:textColor="@color/colorViewSubtitle"
+            android:importantForAutofill="no"
+            android:textSize="15sp"
+            android:maxLength="32"/>
+        <Button
+            android:id="@+id/dialogCodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/re_version_code"
+            android:textSize="12sp"
+            android:elevation="10dp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_bg_red_small_radius"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

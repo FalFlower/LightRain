@@ -1,10 +1,8 @@
 package com.lightrain.android.ui.activity
 
-import android.os.Bundle
 import com.lightrain.android.R
 import com.lightrain.android.base.BaseActivity
-import com.lightrain.android.model.ClassBean
-import com.lightrain.android.util.ClassBeanUtil
+import com.lightrain.android.util.StartActivityUtil
 
 class VideoPlayActivity :BaseActivity() {
     override fun getLayoutId(): Int {
@@ -13,7 +11,7 @@ class VideoPlayActivity :BaseActivity() {
 
     override fun initData() {
         //获取传递来的数据
-        val data=ClassBeanUtil.getDataInVideoPlayActivity(intent)
-        println(data?.classVideoUrl)
+        val data=StartActivityUtil.getDataInVideoPlayActivity(intent)
+        println(data?.videoUrl)
     }
 }

@@ -7,10 +7,9 @@ import com.lightrain.android.base.BaseActivity
 import com.lightrain.android.net.HttpManager
 import com.lightrain.android.net.ResponseHandler
 import com.lightrain.android.net.ResponseStatus
-import com.lightrain.android.util.JsonUtil
 import com.lightrain.android.util.URLProviderUtils
 import com.lightrain.android.util.UserInfoUtil
-import com.lightrain.android.view.SettingInfoView
+import com.lightrain.android.widget.SettingInfoView
 import kotlinx.android.synthetic.main.activity_setting.*
 
 class SettingActivity :BaseActivity(), ResponseHandler {
@@ -68,7 +67,8 @@ class SettingActivity :BaseActivity(), ResponseHandler {
     }
 
     override fun onError(msg: String?) {
-        msg?.let { JsonUtil.getResponseException(it).message }?.let { myToast(it) }
+        msg?.let { myToast(it) }
+        //msg?.let { JsonUtil.getResponseException(it).message }?.let { myToast(it) }
     }
 
     override fun onSuccess(status: ResponseStatus, result: String?) {

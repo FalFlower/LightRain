@@ -1,4 +1,4 @@
-package com.lightrain.android.view
+package com.lightrain.android.widget
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -23,13 +23,18 @@ class PersonalSpaceListView :RelativeLayout {
     }
 
     @SuppressLint("SetTextI18n")
-    fun setData(url:String,title:String, num:Int, price:Double){
-        ImageUtil.loadImageRoundedCornersDIY(context,personalSpaceListImage,url,25,5)
+    fun setData(url:String,title:String, num:Int, price:Float){
+        personalSpaceListNullTip.visibility= View.GONE
+        ImageUtil.loadImageRoundedCornersDIY(context,personalSpaceListImage,url,20,1)
         personalSpaceListTitle.text=title
         personalSpaceListPeopleNum.text=num.toString()
-        if (price==0.0)
+        if (price==0.0f)
             personalSpaceListIsFree.text="免费"
         else
             personalSpaceListIsFree.text="${StringUtil.PRICE_SYMBOL}$price"
+    }
+
+    fun setNullData(){
+        personalSpaceListBac.visibility= View.GONE
     }
 }
