@@ -31,6 +31,19 @@
     <string name="tab_fan">粉丝</string>
     <string name="list_follow_null">童鞋你还没有关注其他人哦~</string>
     <string name="list_fan_null">还没有人关注童鞋你哦~</string>
+    <string name="list_class_null">更多优质课程等你来学哦~</string>
     <string name="version_code">请输入验证码</string>
     <string name="re_version_code">重新发送验证码</string>
+    <string name="search_bar_title">语文  ·  数学  ·  英语</string>
+    <string name="all">全部</string>
+    <string name="list_data_null">没有更多数据了</string>
+    <string name="title_learning">学习</string>
+    <string name="class_learning">我的课程</string>
+    <string name="favourite">收藏</string>
+    <string name="qa">问答</string>
+    <string name="note">笔记</string>
+    <string name="hand_write">手记</string>
+    <string name="only_one">专栏</string>
+    <string name="download">下载</string>
+    <string name="sing_in">签到</string>
 </resources>

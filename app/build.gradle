@@ -46,4 +46,5 @@ dependencies {
     implementation 'com.github.ikidou:TypeBuilder:1.0'
     implementation 'com.upyun:upyun-android-sdk:2.1.2'
     implementation 'com.youth.banner:banner:2.0.6'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
 }

@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="home"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <com.lightrain.android.widget.SearchBarView
+        android:id="@+id/homeSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/homeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.youth.banner.Banner
+                android:id="@+id/homeBanner"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                app:delay_time="3000"
+                app:is_auto_loop="true"
+                app:is_infinite_loop="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/homeTabLayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:tabTextColor="@color/tabLayoutSubTitle"
+                    app:tabSelectedTextColor="@color/titleTextColor"
+                    app:tabIndicatorColor="@color/white"
+                    app:tabTextAppearance="@style/toolbarTitleSmall"
+
+                    app:tabMode="scrollable"
+                    app:tabMinWidth="50dp"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabIndicatorFullWidth="false" />
+                <LinearLayout
+                    android:id="@+id/homeClassify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all"
+                        android:textSize="14sp"
+                        android:textColor="@color/classificationTextColor"/>
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@mipmap/ic_classify"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/homeViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
 </LinearLayout>

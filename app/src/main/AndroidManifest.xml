@@ -29,6 +29,9 @@
         <activity android:name=".ui.activity.VideoPlayActivity"/>
         <activity android:name=".ui.activity.EditUserInfoLocationActivity"/>
         <activity android:name=".ui.activity.UserRelationshipActivity"/>
+        <activity android:name=".ui.activity.SearchActivity"/>
+        <activity android:name=".ui.activity.VideoInfoActivity"/>
+        <activity android:name=".ui.activity.ClassifyInfoActivity"/>
         <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

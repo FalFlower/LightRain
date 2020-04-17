@@ -17,6 +17,7 @@ import com.lightrain.android.net.ResponseStatus
 import com.lightrain.android.ui.activity.EditUserInfoLocationActivity
 import com.lightrain.android.util.JsonUtil
 import com.lightrain.android.util.URLProviderUtils
+import com.lightrain.android.util.UserInfoUtil
 import kotlinx.android.synthetic.main.fragment_choose_area.*
 import kotlinx.android.synthetic.main.fragment_choose_area.view.*
 import org.jetbrains.anko.support.v4.runOnUiThread
@@ -78,10 +79,11 @@ class ChooseAreaFragment : Fragment(), ResponseHandler {
     //更新地区
     private fun updateData() {
         val userInfo=LightRainApplication.userInfoBean
-//        userInfo?.let {
-//
-//        }
-        toast("修改成功 :$userInfoLocation")
+        userInfo?.let {
+            it.userLocation=userInfoLocation
+            HttpManager.manager.sendRequestByPost(URLProviderUtils.getUserInfoUpdate(),
+            UserInfoUtil.getUpdateUerInfoBody(it),ResponseStatus.UPDATE,this)
+        }
     }
 
     //查询所有的区
@@ -165,6 +167,9 @@ class ChooseAreaFragment : Fragment(), ResponseHandler {
                         chooseAreaListView.setSelection(0)
                     }
 
+                }
+                ResponseStatus.UPDATE->{
+                    runOnUiThread { toast("修改成功") }
                 }
                 else -> {}
             }

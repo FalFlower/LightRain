@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+    <LinearLayout
+        android:id="@+id/learningListItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/learningListIcon"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitXY"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/learningListTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"
+                android:textColor="@color/colorText"/>
+            <TextView
+                android:id="@+id/learningListProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/titleTextNoSelectColor"
+                android:layout_marginBottom="10dp"/>
+
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>
+<!-- <ImageView
+                android:id="@+id/learningListPoints"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/ic_points"/>-->

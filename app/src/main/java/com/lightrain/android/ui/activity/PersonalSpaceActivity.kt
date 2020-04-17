@@ -22,7 +22,7 @@ class PersonalSpaceActivity :BaseActivity(), ResponseHandler {
     private var userRelationship=LightRainApplication.userRelationship
     private var otherUserInfo:UserInfoBean?=null
     var list=ArrayList<VideoBean>()
-    var count=0
+    private var count=0
     var size=0
     override fun getLayoutId(): Int {
         return R.layout.activity_personal_space

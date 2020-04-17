@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/listItemBac">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="75dp"
+                android:id="@+id/listItemImage"
+                android:scaleType="fitXY"/>
+            <ImageView
+                android:id="@+id/listItemTip"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="5dp"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="7dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp">
+            <TextView
+                android:id="@+id/listItemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:textColor="@color/colorText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:paddingTop="5dp">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/ic_person_num"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/listItemPeopleNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="2dp"
+                    android:gravity="center"
+                    android:text="94793"
+                    android:textColor="@color/colorListGrey"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/listItemIsFree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/colorListGrey"
+                android:text="免费"
+                android:paddingTop="5dp"
+                android:layout_marginStart="2dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

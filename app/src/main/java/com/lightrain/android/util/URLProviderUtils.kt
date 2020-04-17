@@ -140,21 +140,14 @@ object URLProviderUtils {
         list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_1.jpg")
         list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_2.jpg")
         list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_3.jpg")
-        list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_4.jpg")
+        list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_4.png")
         list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_5.jpg")
         list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_6.jpg")
         list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_7.jpg")
         list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_8.jpg")
         list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_9.jpg")
         list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_10.jpg")
-        list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_11.jpg")
-        list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_12.jpg")
-        list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_13.jpg")
-        list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_14.jpg")
-        list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_15.jpg")
-        list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_16.jpg")
-        list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_17.jpg")
-        list.add("http://zt-data.test.upcdn.net/video/icon/video_icon_18.jpg")
+
         return list
     }
 }

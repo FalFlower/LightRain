@@ -14,7 +14,6 @@
             android:id="@+id/infoLoginImg"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:src="@mipmap/ic_login_no"
             android:layout_margin="10dp"
             android:layout_gravity="center"/>
         <LinearLayout
@@ -32,7 +31,6 @@
                     android:id="@+id/infoLoginTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/info_login_no"
                     android:layout_gravity="bottom"
                     android:textSize="20sp"
                     android:textColor="@color/colorText"/>

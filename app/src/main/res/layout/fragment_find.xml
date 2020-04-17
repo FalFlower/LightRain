@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:text="find"
-        android:layout_width="wrap_content"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <com.lightrain.android.widget.SearchBarView
+        android:id="@+id/classifySearchBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/classifyLeftView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_layout_background"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/classifyRightView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
 </LinearLayout>
+    <!--        <q.rorbin.verticaltablayout.VerticalTabLayout-->
+    <!--            android:id="@+id/classifyTabLayout"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="1"-->
+    <!--            app:indicator_color="@color/colorPrimary"-->
+    <!--            app:tab_mode="scrollable"-->
+    <!--            app:indicator_width="3dp"-->
+    <!--            app:indicator_gravity="left"-->
+    <!--            app:indicator_corners="5dp"-->
+    <!--            android:background="@drawable/tab_layout_background"/>-->
+    <!--        <androidx.viewpager.widget.ViewPager-->
+    <!--            android:id="@+id/classifyViewpager"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_weight="2.5"/>-->

@@ -33,7 +33,7 @@ class UserRelationshipAdapter(private val list: List<UserInfoBean>):
             ImageUtil.loadImageRoundedCorners(it,holder.itemView.urListViewIcon,list[position].userIcon)
             //根据用户等级来加载图标(低->高 黄、蓝、粉、红)
             ImageUtil.loadImage(it,holder.itemView.urListViewLabelImg,R.mipmap.ic_fire_red)
-            holder.itemView.urListViewLayout.setOnClickListener {it1->
+            holder.itemView.urListViewLayout.setOnClickListener { _ ->
                 //跳转到个人详细界面
                 StartActivityUtil.toPersonalSpaceActivity(it,list[position])
             }
