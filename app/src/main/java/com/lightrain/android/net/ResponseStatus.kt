@@ -14,5 +14,8 @@ enum class ResponseStatus {
     UV,
     USER_INFO,
     FOLLOW,
-    UN_FOLLOW
+    UN_FOLLOW,
+    MATCH,
+    VIDEO_EVALUATE,
+    USER_EVALUATE
 }

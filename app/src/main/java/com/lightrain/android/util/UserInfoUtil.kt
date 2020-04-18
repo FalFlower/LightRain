@@ -67,6 +67,16 @@ object UserInfoUtil {
         return formBody.build()
     }
 
+    //?videoId=$videoId&username=$username&videoProgress=$videoProgress
+    //获取用户更新个人关系信息表单
+    fun getUpdateUVBody(videoId:String,username:String,videoProgress:Int): FormBody {
+        val formBody =FormBody.Builder()
+        formBody.add("videoId",videoId)
+        formBody.add("username",username)
+        formBody.add("videoProgress",videoProgress.toString())
+        return formBody.build()
+    }
+
     //获取用户更新个人关系信息表单
     fun getFollowOrUnFollowBody(username:String,userFollow:String): FormBody {
         val formBody =FormBody.Builder()
@@ -98,31 +108,6 @@ object UserInfoUtil {
         val regex = ";"
         return msg.split(regex)
     }
-//
-//    //合并用户关系中粉丝、关注、收藏字段
-//    fun mergeUserRelationshipList(relationship:String):String{
-//        val regex = ";"
-//        return LightRainApplication.userRelationship?.userFollows+regex+relationship
-//    }
-//
-//    //移除用户关系中粉丝、关注、收藏字段
-//    fun removeUserRelationshipList(data:String,remove:String):String{
-//        val regex = ";"
-//        val list=analysisUserRelationshipList(data)
-//        var msg=""
-//        for (s in list) {
-//            if (s != remove)
-//                msg+=s+regex
-//        }
-//        return msg
-//    }
-//
-//
-//    //更新用户关系中粉丝、关注、收藏字段
-//    fun addUserRelationshipList(data:String,add:String):String{
-//        val regex = ";"
-//        return data+regex+add
-//    }
 
 
 }

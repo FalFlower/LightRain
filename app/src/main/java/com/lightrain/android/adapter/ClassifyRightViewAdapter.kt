@@ -63,7 +63,7 @@ class ClassifyRightViewAdapter(private var status:Int,private var title:String):
         holder.itemView.classifyRightViewLayout.setOnClickListener {
             //跳转到详情分类展示界面
             context?.let { it1 -> labelList?.let { list ->
-                StartActivityUtil.toClassifyInfoActivity(it1,position,title, list)
+                StartActivityUtil.toSearchInfoActivity(it1,title, "$title;${list[position]}")
             } }
         }
     }

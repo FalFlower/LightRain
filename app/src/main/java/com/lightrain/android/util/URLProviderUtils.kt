@@ -61,8 +61,12 @@ object URLProviderUtils {
         return "$urlIp/video/uv/get?videoId=$videoId&username=$username"
     }//获取用户观看指定视频时长和最近观看时间
 
-    fun updateUVInfo(videoId:String,username:String,videoProgress:Int):String{
-        return "$urlIp/video/uv/update?videoId=$videoId&username=$username&videoProgress=$videoProgress"
+//    fun updateUVInfo(videoId:String,username:String,videoProgress:Int):String{
+//        return "$urlIp/video/uv/update?videoId=$videoId&username=$username&videoProgress=$videoProgress"
+//    }//更新用户观看视频信息（增添或者修改）
+
+    fun updateUVInfo():String{
+        return "$urlIp/video/uv/update"
     }//更新用户观看视频信息（增添或者修改）
 
     fun getUVListByUsername(username:String):String{
@@ -73,7 +77,7 @@ object URLProviderUtils {
         return "$urlIp/video/uv/get/all/video?videoId=$videoId"
     }//获取指定视频的观看用户列表
 
-    fun updateVideoEvaluate(videoId:String):String{
+    fun updateVideoEvaluate():String{
         return "$urlIp/video/evaluate/update"
     }// 增加用户对指定视频的评分
 

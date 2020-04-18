@@ -7,7 +7,7 @@ import okhttp3.FormBody
 object VideoInfoUtil {
 
     //获取视频更新表单
-    fun getUpdateUerInfoBody(videoBean: VideoBean): FormBody {
+    fun getUpdateVideoInfoBody(videoBean: VideoBean): FormBody {
         val formBody = FormBody.Builder()
         formBody.add("videoId",videoBean.videoId)
         formBody.add("username",videoBean.username)
@@ -24,12 +24,12 @@ object VideoInfoUtil {
     }
 
     //获取视频更新表单
-    fun getUpdateUerInfoBody(videoEvaluateBean: VideoEvaluateBean ): FormBody {
+    fun getUpdateVideoEvaluateBeanInfoBody(videoEvaluateBean: VideoEvaluateBean ): FormBody {
         val formBody = FormBody.Builder()
         formBody.add("videoId",videoEvaluateBean.videoId)
         formBody.add("username",videoEvaluateBean.username)
         formBody.add("videoScore",videoEvaluateBean.videoScore.toString())
-        formBody.add("VideoEvaluateDetail",videoEvaluateBean.VideoEvaluateDetail)
+        formBody.add("VideoEvaluateDetail",videoEvaluateBean.videoEvaluateDetail)
         return formBody.build()
     }
 

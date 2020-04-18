@@ -85,4 +85,17 @@
         <item name="android:textColor">@color/classificationTextColor</item>
         <item name="android:typeface">monospace</item>
     </style>
+    <style name="miniTitle" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+    <style name="custom_rating_bar_style" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_style</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxWidth">16dp</item>
+        <item name="android:isIndicator">false</item>
+    </style>
 </resources>

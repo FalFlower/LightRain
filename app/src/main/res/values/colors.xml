@@ -9,7 +9,7 @@
     <color name="colorTextHint">#b1b1b1</color>
     <color name="colorTextTip">#506790</color>
     <color name="white">#fff</color>
-    <color name="orange">#f0a33b</color>
+    <color name="orange">#f2950a</color>
     <color name="bacGrey">#f4f5f7</color>
     <color name="bottomGery">#d2d2d2</color>
     <color name="bottomBlack">#5a5a5a</color>
@@ -30,4 +30,10 @@
     <color name="black">#000</color>
     <color name="tabLayoutSubTitle">#72777b</color>
     <color name="listGreyRecycleView">#73767d</color>
+    <color name="search_text">#73777a</color>
+    <color name="search_clean">#36aadd</color>
+    <color name="title_red">#ef1514</color>
+    <color name="icon_down_title">#747579</color>
+    <color name="btn_red">#f63838</color>
+    <color name="bottom_text">#737780</color>
 </resources>
